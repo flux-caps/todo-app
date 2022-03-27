@@ -1,0 +1,18 @@
+titleKey: pageTitle.topic
+url: "/listdata/Topic"
+avatar: "/icons/seminars.png"
+itemActions:
+  edit:
+    type: form
+    key: edit
+    titleKey: action.edit
+    formKey: EditForm
+  delete:
+    type: form
+    key: delete
+    titleKey: action.delete
+  todos:
+    type: subobject
+    key: todos
+    titleKey: pageTitle.todos
+    projectionName: Todo

@@ -1,0 +1,16 @@
+---
+name: Topic
+type: object
+aggregateRootNames:
+    - Topic
+properties:
+    projectionId:
+      type: string
+    title:
+      type: string
+      index: Topic.rootObject.title
+    description:
+      type: string
+      columnType: text
+      index: Topic.rootObject.title
+...

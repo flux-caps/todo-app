@@ -1,0 +1,19 @@
+---
+name: ToDo
+type: object
+aggregateRootNames:
+    - ToDo
+properties:
+    projectionId:
+      type: string
+    parentId:
+      type: string
+      index: ToDo.rootObject.topicId
+    title:
+      type: string
+      index: ToDo.rootObject.title
+    description:
+      type: string
+      columnType: text
+      index: ToDo.rootObject.title
+...

@@ -1,0 +1,17 @@
+rootObjectAggregateName: ToDo
+properties:
+  - titleKey: ToDo.title
+    key: title
+    dataIndex: title
+    valueType: string
+    width: m
+    formItemProps:
+      rules:
+        - required: true
+          message: Please enter a Title
+  - titleKey: ToDo.description
+    key: description
+    dataIndex: description
+    valueType: textarea
+    width: m
+    formItemProps: [ ]

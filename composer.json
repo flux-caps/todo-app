@@ -1,0 +1,115 @@
+{
+  "name": "flux-cap/todo-app",
+  "description": "Component of FluxCapacitor developed by fluxlabs",
+  "version": "0.0.1",
+  "type": "flux-app",
+  "keywords": [
+    "FluxCapacitor",
+    "AggregateEventStorage",
+    "fluxlabs"
+  ],
+  "homepage": "https://fluxlabs.ch",
+  "license": "GPL-3.0-only",
+  "authors": [
+    {
+      "name": "fluxlabs ag",
+      "email": "connect@fluxlabs.ch",
+      "homepage": "https://fluxlabs.ch",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "connect@fluxlabs.ch"
+  },
+  "repositories": [
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/http.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/biotope.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/api-gateway-event-sourced-app.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/projection.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/aggregate-root.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/global-stream.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/storage.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/value-object.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/ui-transformer.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/json-schema-assertion.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/open-api-client.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/json-schema-instance.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/json-schema-document.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/git-client.git"
+    },
+    {
+      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/shell-executor.git"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "ext-yaml": "*",
+    "composer-runtime-api": ">=2.1"
+  },
+  "require-dev": {
+    "flux-eco/http": "dev-main",
+    "flux-eco/biotope": "dev-main",
+    "flux-eco/api-gateway-event-sourced-app": "dev-main",
+    "flux-eco/projection": "dev-main",
+    "flux-eco/aggregate-root": "dev-main",
+    "flux-eco/global-stream": "dev-main",
+    "flux-eco/storage": "dev-main",
+    "flux-eco/value-object": "dev-main",
+    "flux-eco/ui-transformer": "dev-main",
+    "flux-eco/json-schema-assertion": "dev-main",
+    "flux-eco/open-api-client": "dev-main",
+    "flux-eco/json-schema-instance": "dev-main",
+    "flux-eco/json-schema-document": "dev-main",
+    "flux-eco/git-client": "dev-main",
+    "flux-eco/shell-executor": "dev-main",
+    "composer/composer": ">=2.0",
+    "swoole/ide-helper": ">=4.6",
+    "symfony/console": ">=5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "FluxCap\\TodoApp\\": [
+        "src/"
+      ]
+    }
+  },
+  "config": {
+    "classmap-authoritative": true,
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "platform-check": true,
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true
+    }
+  }
+}

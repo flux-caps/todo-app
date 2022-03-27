@@ -1,0 +1,77 @@
+version: '3.7'
+services:
+  flux-ecosystem:
+    depends_on:
+      - flux-event-storage
+      - flux-globalstream-storage
+      - flux-projection-storage
+    build:
+      context: .
+      target: flux-ecosystem-core
+      dockerfile: Dockerfile
+    ports:
+      - 8010:9501
+    environment:
+      MYSQL_PORT: 3306
+      PROJECTION_MYSQL_HOST: flux-projection-storage
+      PROJECTION_MYSQL_DRIVER: Pdo_Mysql
+      PROJECTION_MYSQL_DATABASE: projection
+      PROJECTION_MYSQL_USER: user
+      PROJECTION_MYSQL_PASSWORD: password
+      EVENTS_MYSQL_HOST: flux-event-storage
+      EVENTS_MYSQL_DRIVER: Pdo_Mysql
+      EVENTS_MYSQL_DATABASE: events
+      EVENTS_MYSQL_USER: user
+      EVENTS_MYSQL_PASSWORD: password
+      STREAM_MYSQL_HOST: flux-globalstream-storage
+      STREAM_MYSQL_DRIVER: Pdo_Mysql
+      STREAM_MYSQL_DATABASE: stream
+      STREAM_MYSQL_TABLE: stream
+      STREAM_MYSQL_USER: user
+      STREAM_MYSQL_PASSWORD: password
+      FILE_SHARE_DIRECTORY_PATH: /app/data
+      DIRECTORY_PATH_SRC_FILES: /app/flux-eco/src
+      PHP_VERSION: php_8-0
+      SWOOLE_HTTP_PORT: 9501
+      SWOOLE_HTTP_WORKER_NUM: 1
+      SWOOLE_HTTP_MAX_CONN: 10000
+      SWOOLE_HTTP_MAX_REQUEST: 10000
+      SWOOLE_HTTP_IPC_MODE: 2 #SWOOLE_IPC_MSGQUEUE
+      SWOOLE_HTTP_TASK_WORKER_NUM: 1
+      SWOOLE_HTTP_TASK_IPC_MODE: 2 #SWOOLE_IPC_MSGQUEUE
+      SWOOLE_HTTP_TASK_MAX_REQUEST: 5000
+      SWOOLE_HTTP_DISPATCH_MODE: 1
+      SWOOLE_HTTP_DAEMONIZE: 0
+      SWOOLE_HTTP_BACKLOG: 2048
+      SWOOLE_HTTP_OPEN_TCP_KEEPALIVE: 1
+      SWOOLE_HTTP_TCP_DEFER_ACCEPT: 5
+      SWOOLE_HTTP_OPEN_TCP_NODELAY: 1
+      SWOOLE_HTTP_LOG_FILE_PATH_NAME: /app/flux-app/logs/http.log
+      URN_PREFIX: ch:flux-ecosystem
+  flux-event-storage:
+    image: mysql
+    ports:
+      - 3304:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: events
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+  flux-globalstream-storage:
+    image: mysql
+    ports:
+      - 3305:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: stream
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+  flux-projection-storage:
+    image: mysql
+    ports:
+      - 3303:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: projection
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password

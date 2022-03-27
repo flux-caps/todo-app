@@ -1,0 +1,9 @@
+pageTitle:
+  todos: Todo's
+  topic: Thema
+Topic:
+  title: Thema
+  description: Beschreibung
+Todo:
+  title: ToDo
+  description: Beschreibung

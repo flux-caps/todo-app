@@ -1,0 +1,13 @@
+titleKey: pageTitle.todos
+url: "/listdata/ToDo"
+avatar: "/icons/seminars.png"
+itemActions:
+  edit:
+    type: form
+    key: edit
+    titleKey: action.edit
+    formKey: EditForm
+  delete:
+    type: form
+    key: delete
+    titleKey: action.delete
