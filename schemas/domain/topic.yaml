@@ -1,6 +1,6 @@
 ---
-$id: urn:ch:flux-capacitor-todo-app:aggregate-root:todo
-name: Todo
+$id: urn:ch:flux-capacitor-todo-app:aggregate-root:topic
+name: topic
 type: object
 properties:
     aggregateId:
@@ -11,7 +11,7 @@ properties:
         readOnly: true
     aggregateName:
         type: string
-        const: TrainingUnit
+        const: topic
         readOnly: true
     sequence:
         type: integer
@@ -38,12 +38,8 @@ properties:
     rootObject:
         type: object
         properties:
-            topicId:
-                type: string
             title:
                 type: string
             description:
-                type: string
-            status:
                 type: string
 ...

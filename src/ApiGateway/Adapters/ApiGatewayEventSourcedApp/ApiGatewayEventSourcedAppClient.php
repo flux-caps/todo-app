@@ -23,4 +23,18 @@ class ApiGatewayEventSourcedAppClient implements Ports\ApiGatewayEventSourcedApp
     {
         $this->apiGatewayEventSourcedAppApi->initialize();
     }
+
+    public function command(string $correlationId, string $actorEmail, string $requestUri, array $requestContent) : void
+    {
+        $this->apiGatewayEventSourcedAppApi->command($correlationId, $actorEmail, $requestUri, $requestContent);
+    }
+
+    public function query(
+        string $correlationId,
+        string $actorEmail,
+        string $requestUri,
+        array $requestContent
+    ) : array {
+       return $this->apiGatewayEventSourcedAppApi->query($correlationId, $actorEmail, $requestUri, $requestContent);
+    }
 }

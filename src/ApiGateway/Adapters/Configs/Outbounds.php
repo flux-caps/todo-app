@@ -22,4 +22,8 @@ class Outbounds implements Ports\Configs\Outbounds
     {
         return Adapters\ApiGatewayEventSourcedApp\ApiGatewayEventSourcedAppClient::new();
     }
+
+    public function getValueObjectClient(): Ports\ValueObject\ValueObjectClient {
+        return Adapters\ValueObject\ValueObjectClient::new();
+    }
 }

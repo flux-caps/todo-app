@@ -2,7 +2,7 @@
 set -e
 
 function printBanner {
-  echo "..., Doc. Are You Telling Me You Built A Time Machine...Out Of ORBITALS?";
+  echo "..., Doc. Are You Telling Me You Built A Time Machine...Out Of PHP?";
 }
 
 function waitForMySQLServer {
@@ -15,9 +15,8 @@ function waitForMySQLServer {
 
 function startServer {
   php /app/bin/initialize.php;
+  php /app/bin/server.php
 }
-
-#php /app/bin/server.php
 
 printBanner
 waitForMySQLServer

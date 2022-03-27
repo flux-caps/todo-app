@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e76494c47e61ef5014ac283d6fb5b73a",
+    "content-hash": "05bfba6ca91334ddb55d91e7a5fc25d6",
     "packages": [],
     "packages-dev": [
         {
@@ -615,7 +615,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/aggregate-root.git",
-                "reference": "c1d5dcfadb5fb6c7aa3bb90cf7d5b25ae7c1d514"
+                "reference": "aa5a4ab07cd8b3fb1d7c6f8147c6e499497bbdd8"
             },
             "require": {
                 "ext-curl": "*",
@@ -664,7 +664,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T16:18:32+00:00"
+            "time": "2022-03-27T21:31:52+00:00"
         },
         {
             "name": "flux-eco/api-gateway-event-sourced-app",
@@ -672,7 +672,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/api-gateway-event-sourced-app.git",
-                "reference": "526a55af5a18d89edbd48d67f20e2bd7424425e5"
+                "reference": "d1b3c335dd0b97b4515215850b2803ff0798fc9b"
             },
             "require": {
                 "composer-runtime-api": ">=2.1",
@@ -725,7 +725,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T17:45:18+00:00"
+            "time": "2022-03-27T21:31:56+00:00"
         },
         {
             "name": "flux-eco/biotope",
@@ -733,7 +733,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/biotope.git",
-                "reference": "7addd2e71115aa4a2feed2ebb9492d1226709f9c"
+                "reference": "3c52c22a9e470504bf3be1272cd53535ea8d6e72"
             },
             "default-branch": true,
             "type": "flux-app",
@@ -758,7 +758,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T13:32:04+00:00"
+            "time": "2022-03-27T04:53:25+00:00"
         },
         {
             "name": "flux-eco/git-client",
@@ -766,7 +766,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/git-client.git",
-                "reference": "242cfc45a6e9814981daafd300d6b18e859daeef"
+                "reference": "ec4d3d740c06e71ec489a5711118471f2247762d"
             },
             "require": {
                 "composer-runtime-api": ">=2.1",
@@ -774,6 +774,9 @@
                 "ext-json": "*",
                 "ext-yaml": "*",
                 "php": ">=8.0"
+            },
+            "require-dev": {
+                "flux-eco/shell-executor": "dev-main"
             },
             "default-branch": true,
             "type": "flux-app",
@@ -805,7 +808,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T20:28:48+00:00"
+            "time": "2022-03-27T01:00:52+00:00"
         },
         {
             "name": "flux-eco/global-stream",
@@ -813,7 +816,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/global-stream.git",
-                "reference": "f6b8150a5b674ef497d68e2a855797463fd37cf8"
+                "reference": "e63b723994f39232fcd8a17e2034753976fa1eb5"
             },
             "require": {
                 "ext-curl": "*",
@@ -859,64 +862,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T16:21:09+00:00"
-        },
-        {
-            "name": "flux-eco/http",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/http.git",
-                "reference": "b9c21ac9c99b48051aa5acd784f9d4855790e0b4"
-            },
-            "require": {
-                "composer-runtime-api": ">=2.1",
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-yaml": "*",
-                "php": ">=8.0",
-                "psr/http-factory": ">=1.0",
-                "psr/http-message": ">=1.0",
-                "psr/http-server-handler": ">=1.0",
-                "psr/http-server-middleware": ">=1.0"
-            },
-            "require-dev": {
-                "composer/composer": ">=2.0",
-                "flux-eco/api-gateway": "dev-main",
-                "swoole/ide-helper": ">=4.6",
-                "symfony/console": ">=5.2"
-            },
-            "default-branch": true,
-            "type": "flux-app",
-            "autoload": {
-                "psr-4": {
-                    "FluxEco\\Http\\": [
-                        "src/"
-                    ]
-                }
-            },
-            "license": [
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "fluxlabs ag",
-                    "email": "support@fluxlabs.ch",
-                    "homepage": "https://fluxlabs.ch",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Component for flux-capacitor apps developed by fluxlabs",
-            "homepage": "https://fluxlabs.ch",
-            "keywords": [
-                "flux-capacitor",
-                "flux-ecosystem",
-                "fluxlabs ag"
-            ],
-            "support": {
-                "email": "support@fluxlabs.ch"
-            },
-            "time": "2022-03-26T20:33:03+00:00"
+            "time": "2022-03-27T21:46:57+00:00"
         },
         {
             "name": "flux-eco/json-schema-assertion",
@@ -924,7 +870,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/json-schema-assertion.git",
-                "reference": "81f7583bc62493b163760078e41bdba9ba6a63a5"
+                "reference": "c3ea40f7890c54e167696d0dbe17f3f6ad248e3d"
             },
             "require": {
                 "ext-curl": "*",
@@ -967,7 +913,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T16:21:28+00:00"
+            "time": "2022-03-27T21:42:31+00:00"
         },
         {
             "name": "flux-eco/json-schema-document",
@@ -975,7 +921,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/json-schema-document.git",
-                "reference": "e442e038b1446e36f99aa7024efdf0030220e803"
+                "reference": "98b8943ef0f7e1efe359baae61b99116f88b18c6"
             },
             "require": {
                 "composer-runtime-api": ">=2.1",
@@ -1030,7 +976,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T15:58:44+00:00"
+            "time": "2022-03-27T21:32:12+00:00"
         },
         {
             "name": "flux-eco/json-schema-instance",
@@ -1038,7 +984,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/json-schema-instance.git",
-                "reference": "c69d196b2c7106eda9d16e8710daa98162ea0b66"
+                "reference": "cc7e332fa75d638f4dc8c5aa36ea798a982965a8"
             },
             "require": {
                 "composer-runtime-api": ">=2.1",
@@ -1093,7 +1039,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T16:21:52+00:00"
+            "time": "2022-03-27T21:47:08+00:00"
         },
         {
             "name": "flux-eco/open-api-client",
@@ -1101,7 +1047,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/open-api-client.git",
-                "reference": "580ed9ba2dc93fd5b3b14f985b56dda5866d9f4f"
+                "reference": "d5ad003ca479ad3625eba79ee1c62f2330ad5151"
             },
             "require": {
                 "composer-runtime-api": ">=2.1",
@@ -1156,7 +1102,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T15:32:07+00:00"
+            "time": "2022-03-27T21:32:19+00:00"
         },
         {
             "name": "flux-eco/projection",
@@ -1164,7 +1110,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/projection.git",
-                "reference": "58d5ffab19d577e0002391ff9f04dbf8c8bab443"
+                "reference": "49759e8a95f6c6ef27c19935c7d977ab34367b8e"
             },
             "require": {
                 "composer-runtime-api": ">=2.1",
@@ -1224,7 +1170,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T16:22:16+00:00"
+            "time": "2022-03-27T21:42:44+00:00"
         },
         {
             "name": "flux-eco/shell-executor",
@@ -1232,7 +1178,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/shell-executor.git",
-                "reference": "396f5d17030e07d659c55135e738f5574605ff57"
+                "reference": "841f77e113803d97cb25169756cb67a1968859e6"
             },
             "require": {
                 "composer-runtime-api": ">=2.1",
@@ -1275,7 +1221,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T22:04:29+00:00"
+            "time": "2022-03-27T21:42:48+00:00"
         },
         {
             "name": "flux-eco/storage",
@@ -1283,7 +1229,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/storage.git",
-                "reference": "c0540a14a21f1243e9bed568587856e4a957962f"
+                "reference": "b6dc5ca0e18b9e715e7e3496cf2e49229cafa5a7"
             },
             "require": {
                 "ext-curl": "*",
@@ -1328,7 +1274,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T16:19:43+00:00"
+            "time": "2022-03-27T05:03:59+00:00"
         },
         {
             "name": "flux-eco/ui-transformer",
@@ -1336,7 +1282,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/ui-transformer.git",
-                "reference": "e11037ec3f6c067b5985db7bae8d68520675e60f"
+                "reference": "ce6001dd95448029ede9c5e65e45f005fec0a845"
             },
             "require": {
                 "ext-curl": "*",
@@ -1379,7 +1325,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T15:04:09+00:00"
+            "time": "2022-03-27T21:32:33+00:00"
         },
         {
             "name": "flux-eco/value-object",
@@ -1387,7 +1333,7 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/value-object.git",
-                "reference": "405a76a2e7823c2da0eb0c50548fa9c4b27956ab"
+                "reference": "6e529ce305e7ca6886e7f920ad4c94f1e15fd56a"
             },
             "require": {
                 "ext-curl": "*",
@@ -1431,7 +1377,7 @@
             "support": {
                 "email": "support@fluxlabs.ch"
             },
-            "time": "2022-03-26T16:20:17+00:00"
+            "time": "2022-03-27T04:54:05+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -2105,16 +2051,16 @@
         },
         {
             "name": "ramsey/uuid",
-            "version": "4.3.0",
+            "version": "4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "8ced2afadd9ce455e2d5919d27c57e344bae4a09"
+                "reference": "8505afd4fea63b81a85d3b7b53ac3cb8dc347c28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/8ced2afadd9ce455e2d5919d27c57e344bae4a09",
-                "reference": "8ced2afadd9ce455e2d5919d27c57e344bae4a09",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/8505afd4fea63b81a85d3b7b53ac3cb8dc347c28",
+                "reference": "8505afd4fea63b81a85d3b7b53ac3cb8dc347c28",
                 "shasum": ""
             },
             "require": {
@@ -2159,9 +2105,6 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "4.x-dev"
-                },
                 "captainhook": {
                     "force-install": true
                 }
@@ -2186,7 +2129,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
-                "source": "https://github.com/ramsey/uuid/tree/4.3.0"
+                "source": "https://github.com/ramsey/uuid/tree/4.3.1"
             },
             "funding": [
                 {
@@ -2198,7 +2141,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-26T22:00:50+00:00"
+            "time": "2022-03-27T21:42:02+00:00"
         },
         {
             "name": "react/promise",
@@ -3522,7 +3465,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "flux-eco/http": 20,
         "flux-eco/biotope": 20,
         "flux-eco/api-gateway-event-sourced-app": 20,
         "flux-eco/projection": 20,

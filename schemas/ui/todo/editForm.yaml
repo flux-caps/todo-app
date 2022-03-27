@@ -1,6 +1,8 @@
-rootObjectAggregateName: ToDo
+rootObjectAggregateName: Todo
 properties:
-  - titleKey: ToDo.title
+  - title:
+      type: lngKey
+      key: todo.title
     key: title
     dataIndex: title
     valueType: string
@@ -9,7 +11,9 @@ properties:
       rules:
         - required: true
           message: Please enter a Title
-  - titleKey: ToDo.description
+  - title:
+      type: lngKey
+      key: todo.description
     key: description
     dataIndex: description
     valueType: textarea

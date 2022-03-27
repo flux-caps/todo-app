@@ -23,9 +23,6 @@
   },
   "repositories": [
     {
-      "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/http.git"
-    },
-    {
       "type": "vcs", "url": "ssh://git@git.fluxlabs.ch:10022/fluxlabs/flux-eco/biotope.git"
     },
     {
@@ -77,7 +74,6 @@
     "composer-runtime-api": ">=2.1"
   },
   "require-dev": {
-    "flux-eco/http": "dev-main",
     "flux-eco/biotope": "dev-main",
     "flux-eco/api-gateway-event-sourced-app": "dev-main",
     "flux-eco/projection": "dev-main",

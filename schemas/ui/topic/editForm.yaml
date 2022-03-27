@@ -1,6 +1,8 @@
-rootObjectAggregateName: Topic
+rootObjectAggregateName: ToDo
 properties:
-  - titleKey: Topic.title
+  - title:
+      type: lngKey
+      key: topic.title
     key: title
     dataIndex: title
     valueType: string
@@ -9,7 +11,9 @@ properties:
       rules:
         - required: true
           message: Please enter a Title
-  - titleKey: Topic.description
+  - title:
+      type: lngKey
+      key: topic.description
     key: description
     dataIndex: description
     valueType: textarea
