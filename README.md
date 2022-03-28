@@ -1,5 +1,7 @@
 # todo-app
-example Appliction
+This example application shows how the components of 
+https://github.com//flux-eco can be used in interaction with each other.
+
 ## Requirements
 * Docker: version >= 20.10
 * docker-compose: >= v2.3.3

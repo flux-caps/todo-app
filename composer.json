@@ -89,8 +89,7 @@
     "flux-eco/git-client": "dev-main",
     "flux-eco/shell-executor": "dev-main",
     "composer/composer": ">=2.0",
-    "swoole/ide-helper": ">=4.6",
-    "symfony/console": ">=5.2"
+    "swoole/ide-helper": ">=4.6"
   },
   "autoload": {
     "psr-4": {

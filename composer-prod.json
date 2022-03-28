@@ -1,0 +1,66 @@
+{
+  "name": "flux-cap/todo-app",
+  "description": "Component of FluxCapacitor developed by fluxlabs",
+  "version": "0.0.1",
+  "type": "flux-app",
+  "keywords": [
+    "FluxCapacitor",
+    "AggregateEventStorage",
+    "fluxlabs"
+  ],
+  "homepage": "https://fluxlabs.ch",
+  "license": "GPL-3.0-only",
+  "authors": [
+    {
+      "name": "fluxlabs ag",
+      "email": "connect@fluxlabs.ch",
+      "homepage": "https://fluxlabs.ch",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "connect@fluxlabs.ch"
+  },
+  "require": {
+    "php": ">=8.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "ext-yaml": "*",
+    "composer-runtime-api": ">=2.1"
+  },
+  "require-dev": {
+    "flux-eco/biotope": ">=0.0.1",
+    "flux-eco/api-gateway-event-sourced-app": ">=0.0.1",
+    "flux-eco/projection": ">=0.0.1",
+    "flux-eco/aggregate-root": ">=0.0.1",
+    "flux-eco/global-stream": ">=0.0.1",
+    "flux-eco/storage": ">=0.0.1",
+    "flux-eco/value-object": ">=0.0.1",
+    "flux-eco/ui-transformer": ">=0.0.1",
+    "flux-eco/json-schema-assertion": ">=0.0.1",
+    "flux-eco/open-api-client": ">=0.0.1",
+    "flux-eco/json-schema-instance": ">=0.0.1",
+    "flux-eco/json-schema-document": ">=0.0.1",
+    "flux-eco/git-client": ">=0.0.1",
+    "flux-eco/shell-executor": ">=0.0.1",
+    "composer/composer": ">=2.0",
+    "swoole/ide-helper": ">=4.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "FluxCap\\TodoApp\\": [
+        "src/"
+      ]
+    }
+  },
+  "config": {
+    "classmap-authoritative": true,
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "platform-check": true,
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true
+    }
+  }
+}
