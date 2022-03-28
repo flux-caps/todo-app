@@ -302,7 +302,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/pageDefinition"
+                  "$ref": "#/components/schemas/page"
                 }
               }
             }
@@ -373,7 +373,7 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/pageDefinition"
+              "$ref": "#/components/schemas/page"
             }
           },
           "total": {
@@ -397,7 +397,7 @@
           }
         }
       },
-      "pageDefinition": {
+      "page": {
         "type": "object",
         "properties": {
           "title": {
