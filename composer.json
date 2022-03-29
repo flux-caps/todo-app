@@ -66,14 +66,6 @@
     }
   ],
   "require": {
-    "php": ">=8.0",
-    "ext-curl": "*",
-    "ext-json": "*",
-    "ext-pdo": "*",
-    "ext-yaml": "*",
-    "composer-runtime-api": ">=2.1"
-  },
-  "require-dev": {
     "flux-eco/biotope": "dev-main",
     "flux-eco/api-gateway-event-sourced-app": "dev-main",
     "flux-eco/projection": "dev-main",
@@ -88,6 +80,14 @@
     "flux-eco/json-schema-document": "dev-main",
     "flux-eco/git-client": "dev-main",
     "flux-eco/shell-executor": "dev-main",
+    "php": ">=8.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "ext-yaml": "*",
+    "composer-runtime-api": ">=2.1"
+  },
+  "require-dev": {
     "composer/composer": ">=2.0",
     "swoole/ide-helper": ">=4.6"
   },
