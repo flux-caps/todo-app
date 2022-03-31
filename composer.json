@@ -1,7 +1,7 @@
 {
   "name": "flux-cap/todo-app",
   "description": "Component of FluxCapacitor developed by fluxlabs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "flux-app",
   "keywords": [
     "FluxCapacitor",

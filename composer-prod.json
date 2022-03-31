@@ -37,7 +37,7 @@
     "flux-eco/global-stream": ">=0.0.1",
     "flux-eco/storage": ">=0.0.1",
     "flux-eco/value-object": ">=0.0.1",
-    "flux-eco/ui-transformer": ">=0.0.1",
+    "flux-eco/ui-transformer": ">=0.0.2",
     "flux-eco/json-schema-assertion": ">=0.0.1",
     "flux-eco/open-api-client": ">=0.0.1",
     "flux-eco/json-schema-instance": ">=0.0.1",
