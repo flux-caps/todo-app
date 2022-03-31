@@ -1,4 +1,4 @@
-FROM git.fluxlabs.ch:5000/fluxlabs/flux-capacitor/flux-biotope/flux-biotope:latest AS flux-ecosystem-core
+FROM fluxms/flux-eco-biotope:latest AS flux-ecosystem-core
 
 ENV UI_DEFINITIONS_DIRECTORY="/app/schemas/ui"
 ENV FLUXECO_AGGREGATEROOT_DIRECTORY="/app/vendor/flux-eco/aggregate-root"
