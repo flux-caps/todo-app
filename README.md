@@ -8,6 +8,18 @@ https://github.com//flux-eco can be used in interaction with each other.
 * npm: >= 6.14
 
 ## Run it
+Clone the repository
+```
+git clone https://git.fluxlabs.ch/fluxlabs/flux-caps/todo-app.git
+```
+Change to the app directory 
+```
+cd todo-app
+```
+Update the submodules
+```
+git submodule update --init
+```
 Run in a first terminal
 ```
 docker-compose up
