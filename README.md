@@ -28,7 +28,7 @@ Run in a second terminal
 ```
 php bin/startWebinterfaceInDevMode.php
 ```
-Acess webinterface by http://localhost:8010/
+Acess webinterface at http://localhost:8000/
 
 ## Contributing :purple_heart:
 Please ...
