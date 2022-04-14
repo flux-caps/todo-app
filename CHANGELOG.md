@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## [0.5.0]
+* change: functional usage
+
 ## [0.0.1]
 init Version
 

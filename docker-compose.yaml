@@ -1,5 +1,14 @@
 version: '3.7'
 services:
+  flux-webinterface:
+    depends_on:
+      - flux-ecosystem
+    build:
+      context: .
+      target: webinterface
+      dockerfile: Dockerfile
+    environment:
+      NGINX_API_DOWNSTREAM: flux-ecosystem
   flux-ecosystem:
     depends_on:
       - flux-event-storage
@@ -7,7 +16,7 @@ services:
       - flux-projection-storage
     build:
       context: .
-      target: flux-ecosystem-core
+      target: flux-ecosystem
       dockerfile: Dockerfile
     ports:
       - 8010:9501
