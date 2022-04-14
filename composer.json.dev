@@ -1,7 +1,7 @@
 {
   "name": "flux-cap/todo-app",
   "description": "Component of FluxCapacitor developed by fluxlabs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "flux-app",
   "keywords": [
     "FluxCapacitor",
@@ -21,7 +21,61 @@
   "support": {
     "email": "connect@fluxlabs.ch"
   },
+  "repositories": [
+    {
+      "type": "path", "url": "../api-gateway-event-sourced-app"
+    },
+    {
+      "type": "path", "url": "../projection"
+    },
+    {
+      "type": "path", "url": "../aggregate-root"
+    },
+    {
+      "type": "path", "url": "../global-stream"
+    },
+    {
+      "type": "path", "url": "../storage"
+    },
+    {
+      "type": "path", "url": "../value-object"
+    },
+    {
+      "type": "path", "url": "../ui-transformer"
+    },
+    {
+      "type": "path", "url": "../json-schema-assertion"
+    },
+    {
+      "type": "path", "url": "../open-api-client"
+    },
+    {
+      "type": "path", "url": "../json-schema-instance"
+    },
+    {
+      "type": "path", "url": "../json-schema-document"
+    },
+    {
+      "type": "path", "url": "../git-client"
+    },
+    {
+      "type": "path", "url": "../shell-executor"
+    }
+  ],
   "require": {
+    "flux-eco/api-gateway-event-sourced-app": ">=0.0.1",
+    "flux-eco/projection": ">=0.0.1",
+    "flux-eco/aggregate-root": ">=0.0.1",
+    "flux-eco/global-stream": ">=0.0.1",
+    "flux-eco/storage": ">=0.0.1",
+    "flux-eco/value-object": ">=0.0.1",
+    "flux-eco/ui-transformer": ">=0.0.1",
+    "flux-eco/json-schema-assertion": ">=0.0.1",
+    "flux-eco/open-api-client": ">=0.0.1",
+    "flux-eco/json-schema-instance": ">=0.0.1",
+    "flux-eco/json-schema-document": ">=0.0.1",
+    "flux-eco/git-client": ">=0.0.1",
+    "flux-eco/shell-executor": ">=0.0.1",
     "php": ">=8.0",
     "ext-curl": "*",
     "ext-json": "*",
@@ -30,20 +84,6 @@
     "composer-runtime-api": ">=2.1"
   },
   "require-dev": {
-    "flux-eco/biotope": ">=0.0.1",
-    "flux-eco/api-gateway-event-sourced-app": ">=0.0.1",
-    "flux-eco/projection": ">=0.0.1",
-    "flux-eco/aggregate-root": ">=0.0.1",
-    "flux-eco/global-stream": ">=0.0.1",
-    "flux-eco/storage": ">=0.0.1",
-    "flux-eco/value-object": ">=0.0.1",
-    "flux-eco/ui-transformer": ">=0.0.2",
-    "flux-eco/json-schema-assertion": ">=0.0.1",
-    "flux-eco/open-api-client": ">=0.0.1",
-    "flux-eco/json-schema-instance": ">=0.0.1",
-    "flux-eco/json-schema-document": ">=0.0.1",
-    "flux-eco/git-client": ">=0.0.1",
-    "flux-eco/shell-executor": ">=0.0.1",
     "composer/composer": ">=2.0",
     "swoole/ide-helper": ">=4.6"
   },

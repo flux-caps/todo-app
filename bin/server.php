@@ -3,7 +3,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use FluxEco\Projection;
 use FluxEco\UiTransformer;
-use FluxCap\TodoApp\ApiGateway\Adapters\Api\ApiGatewayApi;
+use FluxCap\TodoApp\ApiGateway\Adapters\Api\Api;
 
 $server = new Swoole\Http\Server('0.0.0.0', getenv('SWOOLE_HTTP_PORT'));
 
@@ -32,7 +32,7 @@ $onRequest = function ($request, $response) use ($server) {
     echo '[' . date('Y-m-d H:i:s') . ']'. PHP_EOL . 'Channel ==>' . $request->server['request_uri'] . PHP_EOL . 'Content of request ==>' . $rawData . PHP_EOL;
 
 
-    $httpApi =  ApiGatewayApi::new();
+    $httpApi =  Api::new();
     $result = $httpApi->handleHttpRequest($request);
 
     $response->header('Content-Type', 'application/json');

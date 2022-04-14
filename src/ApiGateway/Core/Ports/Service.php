@@ -2,7 +2,7 @@
 
 namespace FluxCap\TodoApp\ApiGateway\Core\Ports;
 
-class ApiGatewayService
+class Service
 {
 
     private Configs\Outbounds $outbounds;
@@ -19,20 +19,20 @@ class ApiGatewayService
 
     public function initialize()
     {
-        $this->outbounds->getApiGatewayEventSourcedAppClient()->initialize();
+        $this->outbounds->initialize();
     }
 
     public function command(string $actorEmail, string $requestUri, array $requestContent) : void
     {
-        $correlationId = $this->outbounds->getValueObjectClient()->createUuid();
-        $this->outbounds->getApiGatewayEventSourcedAppClient()->command($correlationId, $actorEmail, $requestUri,
+        $correlationId = $this->outbounds->getNewUuid();
+        $this->outbounds->command($correlationId, $actorEmail, $requestUri,
             $requestContent);
     }
 
     public function query(string $actorEmail, string $requestUri, array $requestContent) : array
     {
-        $correlationId = $this->outbounds->getValueObjectClient()->createUuid();
-        return $this->outbounds->getApiGatewayEventSourcedAppClient()->query($correlationId, $actorEmail, $requestUri, $requestContent);
+        $correlationId = $this->outbounds->getNewUuid();
+        return $this->outbounds->query($correlationId, $actorEmail, $requestUri, $requestContent);
     }
 
 }

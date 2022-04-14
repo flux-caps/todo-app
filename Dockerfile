@@ -1,4 +1,4 @@
-FROM fluxms/flux-eco-biotope:latest AS flux-ecosystem-core
+FROM fluxms/flux-eco-biotope:latest AS flux-ecosystem
 
 ENV UI_DEFINITIONS_DIRECTORY="/app/schemas/ui"
 ENV FLUXECO_AGGREGATEROOT_DIRECTORY="/app/vendor/flux-eco/aggregate-root"
@@ -39,5 +39,11 @@ COPY --chown=www-data:www-data . /app/
 USER www-data
 WORKDIR /app
 RUN composer install # --no-dev
-EXPOSE 80
+EXPOSE 8010
 ENTRYPOINT ["sh", "docker_entrypoint.sh"]
+
+FROM nginx:1.21.6 AS webinterface
+ENV NGINX_API_DOWNSTREAM="flux-ecosystem"
+
+COPY "./nginx/html/dist" "/usr/share/nginx/html/"
+COPY "./nginx/configs/default.conf.template" "/etc/nginx/templates/"

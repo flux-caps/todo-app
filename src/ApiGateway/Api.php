@@ -1,24 +1,24 @@
 <?php
 
-namespace FluxCap\TodoApp\ApiGateway\Adapters\Api;
+namespace FluxCap\TodoApp\ApiGateway;
 
 use FluxCap\TodoApp\ApiGateway\{Adapters, Core\Ports};
 use Swoole\Http;
 
-class ApiGatewayApi
+class Api
 {
-    private Ports\ApiGatewayService $apiGatewayService;
+    private Ports\Service $apiGatewayService;
     const REQUEST_TYPE_COMMAND = 'command';
     const REQUEST_TYPE_QUERY = 'query';
 
-    private function __construct(Ports\ApiGatewayService $apiGatewayService)
+    private function __construct(Ports\Service $apiGatewayService)
     {
         $this->apiGatewayService = $apiGatewayService;
     }
 
     public static function new() : self
     {
-        $apiGatewayService = Ports\ApiGatewayService::new(Adapters\Configs\Outbounds::new());
+        $apiGatewayService = Ports\Service::new(Adapters\Outbounds::new());
         return new self($apiGatewayService);
     }
 
